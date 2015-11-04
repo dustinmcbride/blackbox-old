@@ -1,0 +1,69 @@
+<%= form_for(@setting) do |f| %>
+  <% if @setting.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@setting.errors.count, "error") %> prohibited this setting from being saved:</h2>
+
+      <ul>
+      <% @setting.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :use %><br>
+    <%= f.check_box :use %>
+  </div>
+
+  <div class="field">
+    <%= f.label :originlat %><br>
+    <%= f.text_field :originlat %>
+  </div>
+  <div class="field">
+    <%= f.label :originlon %><br>
+    <%= f.text_field :originlon  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rightlat %><br>
+    <%= f.text_field :rightlat %>
+  </div>
+  <div class="field">
+    <%= f.label :rightlon %><br>
+    <%= f.text_field :rightlon  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :leftlat %><br>
+    <%= f.text_field :leftlat %>
+  </div>
+  <div class="field">
+    <%= f.label :leftlon %><br>
+    <%= f.text_field :leftlon  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cloudceiling %><br>
+    <%= f.text_field :cloudceiling %>
+  </div>
+  <div class="field">
+    <%= f.label :sunset %><br>
+    <%= f.text_field :sunset %>
+  </div>
+  <div class="field">
+    <%= f.label :sunrise %><br>
+    <%= f.text_field :sunrise %>
+  </div>
+  <div class="field">
+    <%= f.label :dayrange %><br>
+    <%= f.text_field :dayrange %>
+  </div>
+  <div class="field">
+    <%= f.label :nightrange %><br>
+    <%= f.text_field :nightrange %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

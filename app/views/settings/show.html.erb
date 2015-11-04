@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Origin Lat:</strong>
+  <%= @setting.originlat %>
+</p>
+
+<p>
+  <strong>Origin Lon:</strong>
+  <%= @setting.originlat %>
+</p>
+
+<p>
+  <strong>Cloudceiling:</strong>
+  <%= @setting.cloudceiling %>
+</p>
+
+<p>
+  <strong>Sunset:</strong>
+  <%= @setting.sunset %>
+</p>
+
+<p>
+  <strong>Sunrise:</strong>
+  <%= @setting.sunrise %>
+</p>
+
+<p>
+  <strong>Dayrange:</strong>
+  <%= @setting.dayrange %>
+</p>
+
+<p>
+  <strong>Nightrange:</strong>
+  <%= @setting.nightrange %>
+</p>
+
+<%= link_to 'Edit', edit_setting_path(@setting) %> |
+<%= link_to 'Back', settings_path %>

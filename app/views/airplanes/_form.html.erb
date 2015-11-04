@@ -1,0 +1,73 @@
+<%= form_for(@airplane) do |f| %>
+  <% if @airplane.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@airplane.errors.count, "error") %> prohibited this airplane from being saved:</h2>
+
+      <ul>
+      <% @airplane.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :hex %><br>
+    <%= f.text_field :hex %>
+  </div>
+  <div class="field">
+    <%= f.label :sqawk %><br>
+    <%= f.number_field :sqawk %>
+  </div>
+  <div class="field">
+    <%= f.label :flight %><br>
+    <%= f.text_field :flight %>
+  </div>
+  <div class="field">
+    <%= f.label :lat %><br>
+    <%= f.text_field :lat %>
+  </div>
+  <div class="field">
+    <%= f.label :lon %><br>
+    <%= f.text_field :lon %>
+  </div>
+  <div class="field">
+    <%= f.label :validposition %><br>
+    <%= f.number_field :validposition %>
+  </div>
+  <div class="field">
+    <%= f.label :altitude %><br>
+    <%= f.number_field :altitude %>
+  </div>
+  <div class="field">
+    <%= f.label :vert_rate %><br>
+    <%= f.number_field :vert_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :track %><br>
+    <%= f.number_field :track %>
+  </div>
+  <div class="field">
+    <%= f.label :validtrack %><br>
+    <%= f.number_field :validtrack %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br>
+    <%= f.number_field :speed %>
+  </div>
+  <div class="field">
+    <%= f.label :messages %><br>
+    <%= f.number_field :messages %>
+  </div>
+  <div class="field">
+    <%= f.label :seen %><br>
+    <%= f.number_field :seen %>
+  </div>
+  <div class="field">
+    <%= f.label :mlat %><br>
+    <%= f.check_box :mlat %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

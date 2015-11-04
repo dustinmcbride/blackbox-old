@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: 1.5
+  leftpoint: 1.5
+  rightpoint: 1.5
+  cloudceiling: 1.5
+  sunset: 
+  sunrise: 
+  dayrange: 1.5
+  nightrange: 1.5
+
+two:
+  location: 1.5
+  leftpoint: 1.5
+  rightpoint: 1.5
+  cloudceiling: 1.5
+  sunset: 
+  sunrise: 
+  dayrange: 1.5
+  nightrange: 1.5
