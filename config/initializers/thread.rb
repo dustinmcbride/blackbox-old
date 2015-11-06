@@ -13,7 +13,7 @@ while true == true
     if a == nil
       system "sudo python ./vendor/python/writetolcd.py \"No planes in sight\" \"NA\""
     elsif
-      system "sudo python ./vendor/python/writetolcd.py \"#{a.hex}\" \"testline\""
+      system "sudo python ./vendor/python/writetolcd.py \"#{a.hex} A:#{a.altitude}\" \"R:#{a.range} S:#{a.speed}\""
     end
 
     sleep 1
