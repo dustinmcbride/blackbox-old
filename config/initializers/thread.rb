@@ -11,7 +11,7 @@ while true == true
     # write airplane to lcd
 
     if a == nil
-      system "sudo python ./vendor/python/writetolcd.py \"none" \"none\""
+      system "sudo python ./vendor/python/writetolcd.py \"No planes in sight\" \"NA\""
     elsif
       system "sudo python ./vendor/python/writetolcd.py \"#{a.hex}\" \"testline\""
     end
