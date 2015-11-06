@@ -9,7 +9,7 @@ while true == true
     # write fligts in view to db
     # lookup flights in view with flight numbers on flight aware
     # write airplane to lcd
-    system "python ./vendor/python/writetolcd.py \"#{a.hex}\" \"testline\""
+    system "sudo python ./vendor/python/writetolcd.py \"#{a.hex}\" \"testline\""
     sleep 1
   end
   end
