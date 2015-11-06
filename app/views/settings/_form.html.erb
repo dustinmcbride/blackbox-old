@@ -17,6 +17,22 @@
   </div>
 
   <div class="field">
+    <%= f.label :update_in_bg%><br>
+    <%= f.check_box :update_in_bg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :refreshrate%><br>
+    <%= f.number_field :refreshrate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dump1090url %><br>
+    <%= f.text_field :dump1090url %>
+  </div>
+
+
+  <div class="field">
     <%= f.label :originlat %><br>
     <%= f.text_field :originlat %>
   </div>
@@ -39,8 +55,26 @@
     <%= f.text_field :leftlat %>
   </div>
   <div class="field">
-    <%= f.label :leftlon %><br>
+    <%= f.label :farleftlon %><br>
     <%= f.text_field :leftlon  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :farrightlat %><br>
+    <%= f.text_field :farrightlat %>
+  </div>
+  <div class="field">
+    <%= f.label :farrightlon %><br>
+    <%= f.text_field :farrightlon  %>
+  </div>
+
+  <div class="field">
+    <%= f.label :farleftlat %><br>
+    <%= f.text_field :farleftlat %>
+  </div>
+  <div class="field">
+    <%= f.label :farleftlon %><br>
+    <%= f.text_field :farleftlon  %>
   </div>
 
   <div class="field">
@@ -63,6 +97,22 @@
     <%= f.label :nightrange %><br>
     <%= f.text_field :nightrange %>
   </div>
+
+<h2> Use Flight Aware</h2>
+
+<div class="field">
+  <%= f.label :use_flightaware_api%><br>
+  <%= f.check_box :use_flightaware_api %>
+</div>
+  <div class="field">
+    <%= f.label :fa_starttime %><br>
+    <%= f.time_field :fa_starttime %>
+  </div>
+  <div class="field">
+    <%= f.label :fa_stoptime %><br>
+    <%= f.time_field :fa_stoptime %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

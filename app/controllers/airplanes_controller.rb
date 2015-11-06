@@ -6,7 +6,9 @@ class AirplanesController < ApplicationController
   def index
     s = Setting.where(:use => true).first
     @airplanes = Airplane.order('range')
-    @validairplanes = Airplane.where(validposition: 1).where("seen < ?", 60 ).order('range')
+
+
+  @validairplanes = Airplane.where(validposition: 1).where("seen < ?", 60 ).order('range')
 
   polygon = Geokit::Polygon.new([
   Geokit::LatLng.new(s.originlat, s.originlon),
@@ -23,7 +25,7 @@ class AirplanesController < ApplicationController
      piv << a.id
     end
 
-    @planesinview = Airplane.find(piv)
+    @planesinview = Airplane.where(:is_inview => true).order('range')
     #earliest = Model.first(:order => 'column asc')
 
 end
@@ -40,9 +42,11 @@ end
   end
 
 def refresh
+#system "python ./vendor/python/writetolcd.py \"test\" \"testline\""
 Airplane.refresh
 redirect_to airplanes_url
 end
+
 
 
 

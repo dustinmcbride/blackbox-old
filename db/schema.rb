@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151104023354) do
+ActiveRecord::Schema.define(version: 20151106045814) do
 
   create_table "airplanes", force: :cascade do |t|
     t.string   "hex"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20151104023354) do
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
     t.float    "range"
+    t.boolean  "is_inview"
   end
 
   create_table "settings", force: :cascade do |t|
@@ -39,8 +40,8 @@ ActiveRecord::Schema.define(version: 20151104023354) do
     t.datetime "sunrise"
     t.float    "dayrange"
     t.float    "nightrange"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.float    "originlat"
     t.float    "originlon"
     t.float    "rightlat"
@@ -48,6 +49,16 @@ ActiveRecord::Schema.define(version: 20151104023354) do
     t.float    "leftlat"
     t.float    "leftlon"
     t.boolean  "use"
+    t.boolean  "update_in_bg"
+    t.boolean  "use_flightaware_api"
+    t.time     "fa_starttime"
+    t.time     "fa_stoptime"
+    t.string   "dump1090url"
+    t.integer  "refreshrate"
+    t.float    "farrightlat"
+    t.float    "farrightlon"
+    t.float    "farleftlat"
+    t.float    "farleftlon"
   end
 
 end

@@ -69,6 +69,6 @@ class SettingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def setting_params
-      params.require(:setting).permit(:originlat, :originlon, :leftlat, :leftlon, :rightlat, :rightlon, :use, :cloudceiling, :sunset, :sunrise, :dayrange, :nightrange)
+      params.require(:setting).permit(:update_in_bg, :dump1090url, :originlat, :originlon, :leftlat, :leftlon, :rightlat, :rightlon, :use, :cloudceiling, :sunset, :sunrise, :dayrange, :nightrange)
     end
 end
