@@ -59,8 +59,8 @@ def self.refresh
   s = Setting.where(:use => true).first
 
   response = HTTParty.get(s.dump1090url)
-  Airplane.destroy_all
-  #reset_pk_sequence!
+  Airplane.delete_all
+
     response.each do |r|
 
       if r['validposition'] == 1
@@ -90,6 +90,7 @@ def self.refresh
       #record if plan is in view
       a.is_inview = a.inview
       a.save
+      
 
       end
     end
