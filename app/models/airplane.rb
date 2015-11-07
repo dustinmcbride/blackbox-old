@@ -20,7 +20,7 @@ def getlcdmessage
   msg = Array.new
 
 
-    l1 = "#{self.flight} A:#{self.altitude}  #{self.getdirectiontolook}"
+    l1 = "#{self.flight} A:#{self.altitude} #{self.getdirectiontolook}"
     l2 = "R:#{self.range.round(1)} S:#{self.speed}"
 
   msg = l1, l2

@@ -19,7 +19,7 @@ while true == true
           system "sudo python ./vendor/python/writetolcd.py \"No planes in sight\" \"←\""
         elsif
           msg = a.getlcdmessage
-          system "sudo python ./vendor/python/writetolcd.py \"#{msg[0]}}\" \"R:#{msg[1]}\""
+          system "sudo python ./vendor/python/writetolcd.py \"#{msg[0]}\" \"R:#{msg[1]}\""
         end
 
 
