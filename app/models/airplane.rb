@@ -19,15 +19,39 @@ end
 def getlcdmessage
   msg = Array.new
 
-  if self.flight.blank? == true
-    l1 = "#{self.hex} A:#{self.altitude}"
+
+    l1 = "#{self.flight} A:#{self.altitude}  #{self.getdirectiontolook}"
     l2 = "R:#{self.range.round(1)} S:#{self.speed}"
-  else
-    l1 = "#{self.flight} A:#{self.altitude}"
-    l2 = "R:#{self.range.round(1)} S:#{self.speed}"
-  end
+
   msg = l1, l2
   msg
+end
+
+
+
+
+def getdirectiontolook
+  s = Setting.where(:use => true).first
+  horizon = [s.rightlat, s.leftlat, s.farrightlat, s.farleftlat]
+  left =  horizon.compact.min
+  right =  horizon.compact.max
+  distance = right - left
+
+  lookleft = left + (distance * 0.20)
+  lookleftcenter = left + (distance * 0.40)
+  lookcenter = left + (distance * 0.60)
+  lookrightcenter = left + (distance * 0.80)
+  lookright = left + (distance * 1)
+
+  a = self.lat
+
+  direction = "<" if a.between?(left,lookleft) == true
+  direction = "\"" if a.between?(lookleft,lookleftcenter) == true
+  direction = "^" if a.between?(lookleftcenter,lookcenter) == true
+  direction = "/" if a.between?(lookcenter,lookrightcenter) == true
+  direction = ">" if a.between?(lookrightcenter,lookright) == true
+
+  direction
 end
 
 

@@ -7,8 +7,12 @@ class AirplanesController < ApplicationController
     s = Setting.where(:use => true).first
     @airplanes = Airplane.order('range')
     @planesinview = Airplane.where(:is_inview => true).order('range')
-    @lcdmessage = @planesinview.first.getlcdmessage
 
+  if @planesinview.blank? == false
+    @lcdmessage = @planesinview.first.getlcdmessage
+  else
+    @lcdmessage = ["No planes in sight"]
+end
 
 
 end
