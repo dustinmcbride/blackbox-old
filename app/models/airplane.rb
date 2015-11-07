@@ -16,17 +16,20 @@ end
 
 
 
-#  s = Setting.where(:use => true).first
+def getlcdmessage
+  msg = Array.new
 
-#  @validairplanes = Airplane.where(validposition: 1).where("seen < ?", 60 ).order('range')
+  if self.flight.blank? == true
+    l1 = "#{self.hex} A:#{self.altitude}"
+    l2 = "R:#{self.range.round(1)} S:#{self.speed}"
+  else
+    l1 = "#{self.flight} A:#{self.altitude}"
+    l2 = "R:#{self.range.round(1)} S:#{self.speed}"
+  end
+  msg = l1, l2
+  msg
+end
 
-#  polygon = Geokit::Polygon.new([
-#  Geokit::LatLng.new(s.originlat, s.originlon),
-#  Geokit::LatLng.new(s.rightlat, s.rightlon),
-#  Geokit::LatLng.new(s.leftlat, s.leftlon)
-#  ])
-
-#  point = Geokit::LatLng.new(a.lat,a.lon)
 
 def self.refresh
   s = Setting.where(:use => true).first

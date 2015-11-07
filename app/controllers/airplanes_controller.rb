@@ -6,35 +6,16 @@ class AirplanesController < ApplicationController
   def index
     s = Setting.where(:use => true).first
     @airplanes = Airplane.order('range')
-
-
-  @validairplanes = Airplane.where(validposition: 1).where("seen < ?", 60 ).order('range')
-
-  polygon = Geokit::Polygon.new([
-  Geokit::LatLng.new(s.originlat, s.originlon),
-  Geokit::LatLng.new(s.rightlat, s.rightlon),
-  Geokit::LatLng.new(s.leftlat, s.leftlon)
-  ])
-
-  piv = Array.new
-  @validairplanes.each do |a|
-
-    point = Geokit::LatLng.new(a.lat,a.lon)
-
-    if polygon.contains?(point) == true
-     piv << a.id
-    end
-
     @planesinview = Airplane.where(:is_inview => true).order('range')
-    #earliest = Model.first(:order => 'column asc')
+    @lcdmessage = @planesinview.first.getlcdmessage
+
+
 
 end
 
 
 
 
-    #raise "test".to_yaml
-  end
 
   # GET /airplanes/1
   # GET /airplanes/1.json
