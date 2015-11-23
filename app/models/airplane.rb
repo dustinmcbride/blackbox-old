@@ -19,8 +19,13 @@ end
 def getlcdmessage
   msg = Array.new
 
+    if self.flight == ""
+      num = self.flight
+    else
+      num = self.hex
+    end
 
-    l1 = "#{self.flight} A:#{self.altitude} #{self.getdirectiontolook}"
+    l1 = "#{num} A:#{self.altitude} #{self.getdirectiontolook}"
     l2 = "R:#{self.range.round(1)} S:#{self.speed}"
 
   msg = l1, l2
@@ -90,7 +95,7 @@ def self.refresh
       #record if plan is in view
       a.is_inview = a.inview
       a.save
-      
+
 
       end
     end
