@@ -28,7 +28,7 @@ gem 'httparty'
 gem 'haversine'
 
 gem 'geokit'
-gem 'thin'
+#gem 'thin'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 
