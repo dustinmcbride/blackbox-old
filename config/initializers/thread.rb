@@ -1,5 +1,5 @@
 Thread.new do
-
+running = 0
 while true == true
   starttime = Time.now
   puts "1"
