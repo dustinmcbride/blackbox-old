@@ -1,13 +1,14 @@
 Thread.new do
 
 while true == true
-  a = Time.now
+  starttime = Time.now
+  puts "1"
     s = Setting.where(:use => true).first
+  puts "2"
       if s.update_in_bg == true
-
-
+  puts "3"
         #get nearest plane
-        Airplane.refresh
+          Airplane.refresh
         a = Airplane.where(:is_inview => true).order('range').first
 
         # write fligts in view to db
@@ -20,15 +21,21 @@ while true == true
           system "sudo python ./vendor/python/writetolcd.py \"No planes in sight\" \" NA \" "
         elsif
           msg = a.getlcdmessage
-          system "sudo python ./vendor/python/writetolcd.py \"#{msg[0]}\" \"R:#{msg[1]}\""
-        end
-
+          system "sudo python ./vendor/python/writetolcd.py \"#{msg[0]}\" \"R:#{msg[1]}\""#        end
+      end
 
     #sleep 0
-    b = Time.now
-    runtime = b - a
-    logger.debug "-----------------------#{runtime}-----------------------"
+    puts "4"
+
   end
+  endtime = Time.now
+  running = endtime - starttime
+  puts "----------------------------------------------"
+  puts running
+  puts "----------------------------------------------"
+  #logger.debug "This is from debug"
   end
+
+
 
 end
