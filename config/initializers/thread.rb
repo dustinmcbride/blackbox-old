@@ -18,7 +18,7 @@ while true == true
 
         # write airplane message to lcd
         if a == nil
-          system "sudo python ./vendor/python/writetolcd.py \"No planes in sight\" \" NA \" "
+          system "sudo python ./vendor/python/writetolcd.py \"No planes\" \"Loop Run: #{running} \" "
         elsif
           msg = a.getlcdmessage
           system "sudo python ./vendor/python/writetolcd.py \"#{msg[0]}\" \"R:#{msg[1]}\""#        end
