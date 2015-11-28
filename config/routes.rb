@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  #match 'customers/tocsv' => 'customers#tocsv', :as => :customer_tocsv
+
+require 'sidekiq/web'
+mount Sidekiq::Web => '/sidekiq'
 
 post 'airplanes/refresh' => 'airplanes#refresh', as: :airplanesrefresh
   resources :airplanes
