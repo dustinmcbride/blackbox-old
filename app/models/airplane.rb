@@ -51,7 +51,7 @@ def getdirectiontolook
   a = self.lat
 
   direction = "<" if a.between?(left,lookleft) == true
-  direction = "\"" if a.between?(lookleft,lookleftcenter) == true
+  direction = "\u2216" if a.between?(lookleft,lookleftcenter) == true
   direction = "^" if a.between?(lookleftcenter,lookcenter) == true
   direction = "/" if a.between?(lookcenter,lookrightcenter) == true
   direction = ">" if a.between?(lookrightcenter,lookright) == true
