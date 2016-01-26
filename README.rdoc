@@ -4,4 +4,4 @@ Using a SDR (software defined radio) device and the FlightAware API determine Ai
 
 Hardware:
 
-I was running this on a Raspberry PI howerver it suffers from performance issues.
+I was running this on a Raspberry PI however it suffers from performance issues.
