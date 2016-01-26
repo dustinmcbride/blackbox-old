@@ -2,5 +2,6 @@
 
 Using a SDR (software defined radio) device and the FlightAware API determine Airplanes in physical view (out a window for example) and update a LCD display with flight stats like range, altitude, speed and direction to look in order to see it.
 
-####Hardware
-I was running this on a Raspberry PI howerver it suffer from performance issues.
+Hardware:
+
+I was running this on a Raspberry PI howerver it suffers from performance issues.
