@@ -1,28 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Using a SDR (software defined radio) device and the FlightAware API determine Airplanes in physical view (out a window for example) and update a LCD display with flight stats like range, altitude, speed and direction to look in order to see it.
 
-Things you may want to cover:
+Hardware:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I was running this on a Raspberry PI however it suffers from performance issues.
