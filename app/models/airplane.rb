@@ -16,21 +16,21 @@ end
 
 
 
-def getlcdmessage
-  msg = Array.new
+#def getlcdmessage
+#  msg = Array.new
 
-    if self.flight == ""
-      num = self.flight
-    else
-      num = self.hex
-    end
+#    if self.flight == ""
+#      num = self.flight
+#    else
+#      num = self.hex
+#    end
 
-    l1 = "#{num} A:#{self.altitude} #{self.getdirectiontolook}"
-    l2 = "R:#{self.range.round(1)} S:#{self.speed}"
+#    l1 = "#{num} A:#{self.altitude} #{self.getdirectiontolook}"
+#    l2 = "R:#{self.range.round(1)} S:#{self.speed}"
 
-  msg = l1, l2
-  msg
-end
+#  msg = l1, l2
+#  msg
+#end
 
 
 

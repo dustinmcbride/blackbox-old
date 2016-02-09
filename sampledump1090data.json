@@ -1,0 +1,7 @@
+[
+{"hex":"a82903", "squawk":"6634", "flight":"", "lat":0.000000, "lon":0.000000, "validposition":0, "altitude":10550,  "vert_rate":0,"track":0, "validtrack":0,"speed":0, "messages":181, "seen":0, "mlat":false},
+{"hex":"ac77d3", "squawk":"0000", "flight":"AAL1239 ", "lat":47.566285, "lon":-122.309242, "validposition":1, "altitude":3425,  "vert_rate":2944,"track":0, "validtrack":1,"speed":268, "messages":32, "seen":0, "mlat":false},
+{"hex":"a7d052", "squawk":"1674", "flight":"", "lat":0.000000, "lon":0.000000, "validposition":0, "altitude":16425,  "vert_rate":0,"track":0, "validtrack":0,"speed":0, "messages":103, "seen":0, "mlat":false},
+{"hex":"ac34a0", "squawk":"1136", "flight":"FDX5986 ", "lat":47.768326, "lon":-122.681648, "validposition":1, "altitude":35000,  "vert_rate":0,"track":112, "validtrack":1,"speed":493, "messages":54, "seen":2, "mlat":false},
+{"hex":"a81077", "squawk":"1525", "flight":"CPZ5708 ", "lat":0.000000, "lon":0.000000, "validposition":0, "altitude":7150,  "vert_rate":0,"track":0, "validtrack":0,"speed":0, "messages":173, "seen":0, "mlat":false}
+]

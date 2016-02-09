@@ -1,1 +1,1 @@
- GetplanesWorker.perform_async()
+ #GetplanesWorker.perform_async()

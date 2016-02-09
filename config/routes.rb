@@ -7,7 +7,7 @@ post 'airplanes/refresh' => 'airplanes#refresh', as: :airplanesrefresh
   resources :airplanes
   resources :settings
 
-
+post 'dump1090hook' => 'dump1090hook#dump', as: :dump1090hook
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

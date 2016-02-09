@@ -20,15 +20,15 @@ class GetplanesWorker
             # lookup flights in view with flight numbers on flight aware
 
             # write airplane message to lcd
-            if a == nil
-              system "sudo python ./vendor/python/writetolcd.py \"No planes\" \"Loop Run: #{running} \" "
-            elsif
-              msg = a.getlcdmessage
-              system "sudo python ./vendor/python/writetolcd.py \"#{msg[0]}\" \"R:#{msg[1]}\""#        end
-          end
+      #      if a == nil
+      #        system "sudo python ./vendor/python/writetolcd.py \"No planes\" \"Loop Run: #{running} \" "
+      #      elsif
+      #        msg = a.getlcdmessage
+      #        system "sudo python ./vendor/python/writetolcd.py \"#{msg[0]}\" \"R:#{msg[1]}\""#        end
+        #  end
 
         #sleep 0
-        puts "4"
+      #  puts "4"
 
       end
       endtime = Time.now
